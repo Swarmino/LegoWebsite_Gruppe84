@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    border: 10px solid black;
+}
+
+.backgroundImage {
+    width: 100%;
+}
+
+/* NAV buttons */
+.upArrow {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 4.5%;
+}
+.downArrow {
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    width: 4.5%;
+}
+
+/* Bo CSS under */
+
+.birds {
+    position: absolute;
+    width: 20%;
+    top: 15%;
+    left: 30%;
+
+    animation-name: birdsAnim, fadeAnim, opacityAnim;
+    animation-duration: 500ms, 20s, 20s;
+    animation-iteration-count: infinite;
+
+}
+
+.plane {
+    position: absolute;
+    width: 5%;
+    top: 8%;
+    right: 5%;
+
+    animation-name: planeAnim;
+    animation-fill-mode: forwards;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.police {
+    position: absolute;
+    width: 5%;
+    top: 50%;
+    left: 30%;
+
+    animation-name: policeAnim, policeOpacity;
+    animation-duration: 5s, 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s, 5s;
+    
+}
+
+.policecar {
+    position: absolute;
+    width: 15%;
+    top: 50%;
+    left: 40%;
+    transform: rotate(15deg);
+
+    animation-name: policeDrive, policeMotor;
+    animation-duration: 7s, 250ms;
+    animation-fill-mode: forwards;
+    animation-delay: 7s;
+    animation-iteration-count: 1, infinite ;
+}
+
+#myBox {
+    position: absolute;
+    bottom: 10%;
+    right: 20%;
+    width: 20%;
+    background-color: white;
+    color:black;
+    animation-name: opacityBox;
+    animation-duration: 2s;
+}
+
+@keyframes opacityBox {
+    0% {
+        opacity: 10%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+
+}
+
+@keyframes planeAnim {
+    0% {
+        right: 1%;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes birdsAnim {
+    0% {
+        top: 8%;
+    }
+
+    50% {
+        top: 10%;
+    }
+
+}
+
+@keyframes fadeAnim {
+    0% {
+        width: 20%;
+    }
+
+    100% {
+        width: 10%;
+    }
+
+}
+
+@keyframes opacityAnim {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+
+}
+
+@keyframes policeAnim {
+    0% {
+        left: 30%;
+    }
+
+    100% {
+        left: 45%;
+    }
+}
+
+@keyframes policeOpacity {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+
+}
+
+@keyframes policeDrive {
+    0% {
+        left: 40%;
+    }
+
+    100% {
+        left: -50%;
+    }
+}
+
+@keyframes policeMotor {
+    0% {
+        top: 50%;
+    }
+
+    50% {
+        top: 51%;
+    }
+}
+
+
+
+
+/* Victor CSS under */
+
+#cloudImg{
+
+    position: absolute;
+    left: -50%;
+    width: 5%;
+
+    /* Animation */
+    animation-name: cloudMoveAnim;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#treeImg{
+    position: absolute;
+    width: 5%;
+    bottom: 25%;
+    right: 10%;
+
+    /* Animation */
+    animation-name: treeMoveAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+
+}
+
+#duckImg{
+    position: absolute;
+    width: 5%;
+    bottom: 18%;
+    left: 50%;
+
+    /* Animation */
+    animation-name: duckImgAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes cloudMoveAnim{
+    0% {
+        left: -50%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes treeMoveAnim{
+    0%{
+        transform: scaleY(100%);
+    }
+    100%{
+        transform: scaleY(105%);
+    }
+}
+
+@keyframes duckImgAnim{
+    0%{
+        transform: translateY(100%);
+    }
+
+    100%{
+        transform: translateY(110%);
+    }
+}
