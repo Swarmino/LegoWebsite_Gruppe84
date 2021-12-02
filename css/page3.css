@@ -73,6 +73,7 @@
 
 #kirkText {
     position: absolute;
+    opacity: 0.8;
     left: 20%;
     bottom: 100%;
     width: 200%;
@@ -105,6 +106,7 @@
 
 #ferrariText {
     position: absolute;
+    opacity: 0.8;
     bottom: 50%;
     right: 20%;
     left: 20%;
@@ -132,7 +134,6 @@
     width: 20%;
     height: 5%;
     bottom: 90%;
-    opacity: 0.7;
     right: -100%;
     animation-name: flyBy;
     animation-duration: 60s;
@@ -151,6 +152,7 @@
 
 #trainText {
     position: absolute;
+    opacity: 0.8;
     left: -50%;
     top: -100%;
     width: 250%;
