@@ -73,6 +73,7 @@
 
 #kirkText {
     position: absolute;
+    opacity: 0.8;
     left: 20%;
     bottom: 100%;
     width: 200%;
@@ -105,6 +106,7 @@
 
 #ferrariText {
     position: absolute;
+    opacity: 0.8;
     bottom: 50%;
     right: 20%;
     left: 20%;
@@ -112,6 +114,7 @@
     border-radius: 5px;
 }
 
+/* Animation for ferrari */
 @keyframes startFerrari {
     0% {
         bottom: -100%;
@@ -132,7 +135,6 @@
     width: 20%;
     height: 5%;
     bottom: 90%;
-    opacity: 0.7;
     right: -100%;
     animation-name: flyBy;
     animation-duration: 60s;
@@ -151,6 +153,7 @@
 
 #trainText {
     position: absolute;
+    opacity: 0.8;
     left: -50%;
     top: -100%;
     width: 250%;
@@ -158,6 +161,7 @@
     border-radius: 5px;
 }
 
+/* Animation for train */
 @keyframes flyBy {
     0% {
         right: -100%;
@@ -217,6 +221,10 @@
     left: 60%;
     bottom: 30%;
     z-index: 0;
+    animation-name: colosseumFloat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #colosseumDiv {
@@ -242,6 +250,15 @@
     border-radius: 5px;
 }
 
+@keyframes colosseumFloat {
+    from {
+        transform: translateY(1%);
+    }
+    to {
+        transform: translateY(-1%);
+    }
+}
+
 /* Castle */
 #castle {
     position: absolute;
@@ -249,7 +266,10 @@
     width: 20vw;
     left: 40%;
     bottom: 50%;
-    transform: translateX(-50%);
+    animation-name: castleFloat;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
 }
 
 #castleDiv {
@@ -272,4 +292,13 @@
     opacity: 0.8;
     border-radius: 5px;
     top: -20%;
+}
+
+@keyframes castleFloat {
+    from {
+        transform: translateY(1%) translateX(-50%);
+    }
+    to {
+        transform: translateY(-1%) translateX(-50%);
+    }
 }
