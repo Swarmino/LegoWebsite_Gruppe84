@@ -96,6 +96,12 @@ body {
     width: 18%;
     bottom: 30%;
     right: 25%;
+
+    animation-name: xmasTreeAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
 }
 
 #cloudImg{
@@ -105,7 +111,7 @@ body {
 
     animation-name: cloudMoveAnim;
     animation-duration: 20s;
-    animation-timing-function: linear;
+    animation-timing-function:cubic-bezier(0.455, 0.03, 0.515, 0.955);
     animation-iteration-count: infinite;
 }
 
@@ -146,6 +152,14 @@ body {
     opacity: 0;
     transition-duration: 1;
     transform: translate(100%,-100%);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding: 0.625%;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    box-shadow: 2px 2px 10px black;
 }
 
 #kirkText {
@@ -156,6 +170,14 @@ body {
     background-color: whitesmoke;
     color:black;
     opacity: 0%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding: 0.625%;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    box-shadow: 2px 2px 10px black;
 }
 
 #houseText {
@@ -166,15 +188,32 @@ body {
     background-color: whitesmoke;
     color:black;
     opacity: 0%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding: 0.625%;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    box-shadow: 2px 2px 10px black;
 }
 
 #treeText {
     position: absolute;
     bottom: 30%;
-    right: 10%;
+    right: 25%;
     width: 20%;
     background-color: whitesmoke;
     color:black;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding: 0.625%;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    box-shadow: 2px 2px 10px black;
 }
 
 /* :hover */
@@ -311,5 +350,15 @@ body {
 
     100%{
         transform: translateY(110%);
+    }
+}
+
+@keyframes xmasTreeAnim{
+    0%{
+        transform: translateY(0%);
+    }
+
+    100%{
+        transform: translateY(10%);
     }
 }
