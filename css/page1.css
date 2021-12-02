@@ -104,7 +104,7 @@ body {
     animation-direction: alternate-reverse;
 }
 
-#cloudImg{
+.cloudImg{
     position: absolute;
     left: -50%;
     width: 5%;
@@ -113,6 +113,27 @@ body {
     animation-duration: 20s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+}
+
+#cloudImg1{
+    animation-name: cloudMoveAnim;
+    animation-delay: 5s;
+}
+#cloudImg2{
+    animation-name: cloudMoveAnim;
+    animation-delay: 2s;
+}
+#cloudImg3{
+    animation-name: cloudMoveAnim;
+    animation-delay: 4s;
+}
+#cloudImg4{
+    animation-name: cloudMoveAnim;
+    animation-delay: 7s;
+}
+#cloudImg5{
+    animation-name: cloudMoveAnim;
+    animation-delay: 8s;
 }
 
 #treeImg{
@@ -150,7 +171,6 @@ body {
     background-color: whitesmoke;
     color:black;
     opacity: 0;
-    transition-duration: 1;
     transform: translate(100%,-100%);
     display: flex;
     align-items: center;
@@ -336,10 +356,10 @@ body {
 
 @keyframes treeMoveAnim{
     0%{
-        transform: scaleY(100%);
+        transform: translateY(100%);
     }
     100%{
-        transform: scaleY(105%);
+        transform: translateY(103%);
     }
 }
 
