@@ -47,9 +47,10 @@
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    opacity: 50%;
+    opacity: 80%;
     width: 100%;
     height: 60vh;
+    z-index: 1;
 }
 
 /* Kirk */
@@ -58,6 +59,7 @@
     width: 10%;
     left: 65%;
     bottom: 10%;
+    z-index: 1;
 }
 
 #kirkDiv {
@@ -93,6 +95,7 @@
 
 #ferrariDiv {
     opacity: 0;
+    top: 80%;
 }
 
 #ferrariDiv:hover {
@@ -102,9 +105,9 @@
 
 #ferrariText {
     position: absolute;
-    transform: rotate(-50deg);
-    bottom: 100%;
-    right: 50%;
+    bottom: 50%;
+    right: 20%;
+    left: 20%;
     background-image: linear-gradient(#98bae7, #b8e4f0);
     border-radius: 5px;
 }
@@ -119,7 +122,6 @@
     100% {
         bottom: 10%;
         left: 30%;
-        transform: rotate(50deg);
     }
 }
 
@@ -177,8 +179,9 @@
 /* Fun facts */
 #blockDiv {
     position: absolute;
-    left: 65%;
-    bottom: 40%;
+    bottom: 30%;
+    z-index: 1;
+    left: 1%;
 }
 
 #blockText {
@@ -187,7 +190,7 @@
 }
 
 .block {
-    width: 30vw;
+    width: 22vw;
     height: 5vw;
     opacity: 0.7;
     background-image: linear-gradient(#98bae7, #b8e4f0);
@@ -198,9 +201,8 @@
 .fact {
     position: relative;
     text-align: center;
-    top: 35%;
+    top: 30%;
     opacity: 0;
-    transform: scale(1.4);
 }
 
 .fact:hover {
@@ -211,17 +213,20 @@
 /* Colosseum */
 #colosseum {
     position: absolute;
-    width: 30%;
+    width: 45%;
+    left: 60%;
     bottom: 30%;
+    z-index: 0;
 }
 
 #colosseumDiv {
     position: absolute;
     width: 25%;
     height: 25%;
-    left: 2%;
-    bottom: 30%;
+    left: 70%;
+    bottom: 40%;
     opacity: 0;
+    z-index: 1;
 }
 
 #colosseumDiv:hover {
