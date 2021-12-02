@@ -1,7 +1,5 @@
 body {
     margin: 0;
-    box-sizing: border-box;
-    overflow: hidden;
 }
 
 .container {
@@ -9,17 +7,19 @@ body {
     border: 10px solid black;
 }
 
+/* Background image */
 .backgroundImage {
     width: 100%;
 }
 
-/* NAV buttons */
+/* Navigation buttons */
 .upArrow {
     position: absolute;
     top: 15%;
     left: 5%;
     width: 4.5%;
 }
+
 .downArrow {
     position: absolute;
     bottom: 15%;
@@ -27,9 +27,8 @@ body {
     width: 4.5%;
 }
 
-/* Bo CSS under */
-
-.birds {
+/* Images % Animation */
+#birdsImg {
     position: absolute;
     width: 20%;
     top: 15%;
@@ -37,11 +36,10 @@ body {
 
     animation-name: birdsAnim, fadeAnim, opacityAnim;
     animation-duration: 500ms, 20s, 20s;
-    animation-iteration-count: infinite;
-
+    animation-iteration-count: infinite, 1, infinite;
 }
 
-.plane {
+#planeImg {
     position: absolute;
     width: 5%;
     top: 8%;
@@ -53,7 +51,7 @@ body {
     animation-iteration-count: infinite;
 }
 
-.police {
+#policeImg {
     position: absolute;
     width: 5%;
     top: 50%;
@@ -62,11 +60,10 @@ body {
     animation-name: policeAnim, policeOpacity;
     animation-duration: 5s, 3s;
     animation-fill-mode: forwards;
-    animation-delay: 2s, 5s;
-    
+    animation-delay: 2s, 5s;   
 }
 
-.policecar {
+#policecarImg {
     position: absolute;
     width: 15%;
     top: 50%;
@@ -80,26 +77,93 @@ body {
     animation-iteration-count: 1, infinite ;
 }
 
-#myBox {
+#oleKirkImg{
     position: absolute;
-    bottom: 10%;
-    right: 20%;
-    width: 20%;
-    background-color: white;
-    color:black;
-    animation-name: opacityBox;
-    animation-duration: 2s;
+    width: 10%;
+    bottom: 15%;
+    left: 15%;
 }
 
+#cloudImg{
+    position: absolute;
+    left: -50%;
+    width: 5%;
+
+    animation-name: cloudMoveAnim;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#treeImg{
+    position: absolute;
+    width: 5%;
+    bottom: 25%;
+    right: 10%;
+
+    animation-name: treeMoveAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+#duckImg{
+    position: absolute;
+    width: 5%;
+    bottom: 18%;
+    left: 50%;
+
+    animation-name: duckImgAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+/* Text boxes */
+#duckText {
+    position: absolute;
+    bottom: -10%;
+    right: 40%;
+    width: 20%;
+    background-color: transparent;
+    color:black;
+    opacity: 0;
+    transition-duration: 1;
+    transform: translate(100%,-100%);
+}
+
+#kirkText {
+    position: absolute;
+    bottom: 20%;
+    left: 25%;
+    width: 20%;
+    background-color: transparent;
+    color:black;
+    opacity: 0;
+    transition-duration: 1;
+    transform: translate(100%,-100%);
+}
+
+/* :hover */
+#oleKirkImg:hover + #kirkText{
+    opacity: 100;
+}
+
+#duckImg:hover + #duckText{
+    opacity: 100;
+}
+
+/* Keyframes */
 @keyframes opacityBox {
     0% {
-        opacity: 10%;
+        opacity: 0%;
     }
 
     100% {
         opacity: 100%;
     }
-
 }
 
 @keyframes planeAnim {
@@ -117,10 +181,9 @@ body {
         top: 8%;
     }
 
-    50% {
-        top: 10%;
+    100% {
+        top: 9%;
     }
-
 }
 
 @keyframes fadeAnim {
@@ -131,7 +194,6 @@ body {
     100% {
         width: 10%;
     }
-
 }
 
 @keyframes opacityAnim {
@@ -142,7 +204,6 @@ body {
     100% {
         opacity: 0%;
     }
-
 }
 
 @keyframes policeAnim {
@@ -163,7 +224,6 @@ body {
     100% {
         opacity: 0%;
     }
-
 }
 
 @keyframes policeDrive {
@@ -184,53 +244,6 @@ body {
     50% {
         top: 51%;
     }
-}
-
-
-
-
-/* Victor CSS under */
-
-#cloudImg{
-
-    position: absolute;
-    left: -50%;
-    width: 5%;
-
-    /* Animation */
-    animation-name: cloudMoveAnim;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-#treeImg{
-    position: absolute;
-    width: 5%;
-    bottom: 25%;
-    right: 10%;
-
-    /* Animation */
-    animation-name: treeMoveAnim;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-
-}
-
-#duckImg{
-    position: absolute;
-    width: 5%;
-    bottom: 18%;
-    left: 50%;
-
-    /* Animation */
-    animation-name: duckImgAnim;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
 }
 
 @keyframes cloudMoveAnim{
