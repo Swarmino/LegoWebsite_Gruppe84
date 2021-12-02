@@ -15,7 +15,7 @@ body {
   width: 100%;
 }
 
-.olekirk {
+.oleKirk {
   position: fixed;
   height: 450px;
   width: 400px;
@@ -24,7 +24,16 @@ body {
   top: 400px;
   bottom: 0px;
   z-index: 2;
+
+  animation-name: OleLego;
+  animation-iteration-count: initial;
+  animation-duration: 4s;
+  animation-delay: 1.2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  z-index: 3;
 }
+
 @keyframes OleLego {
   from {
     right: -220px;
@@ -36,24 +45,86 @@ body {
   }
 }
 
-.olekirk {
-  animation-name: OleLego;
-  animation-iteration-count: initial;
-  animation-duration: 4s;
-  animation-delay: 1.2s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
+.textSpeakingBubble {
+  position: relative;
+  color: black;
+  font-size: 14px;
+  top: 320px;
+  bottom: 200px;
+  left: 1075px;
+  right: 100px;
   z-index: 3;
+
+  animation-name: TextSpeakingBubble;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+
+  animation-iteration-count: initial;
+  animation-delay: 0s;
+  animation-duration: 7s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes TextSpeakingBubble {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.speakingBubble {
+  position: absolute;
+  height: 200px;
+  width: 350px;
+  top: 300px;
+  bottom: 200px;
+  left: 1050px;
+  right: 100px;
+  z-index: 2;
+
+  animation-name: SpeakingBubble;
+  animation-iteration-count: initial;
+  animation-delay: 0s;
+  animation-duration: 6s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes SpeakingBubble {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .earth {
   position: absolute;
   width: 80%;
   top: 50%;
-  left: 50%;
+  left: 10%;
   transform: translate(-50%, -50%);
   z-index: 1;
+
+  animation-name: RotateEarth;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
 }
+@keyframes RotateEarth {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(-53%);
+  }
+}
+
+/* Animation av lego-astronaut i bakgrunnen*/
 @keyframes FloatingLego {
   from {
     left: -220px;
@@ -64,6 +135,7 @@ body {
     top: 500px;
   }
 }
+
 .astronaut {
   width: 100px;
   height: 100px;
@@ -71,15 +143,16 @@ body {
   position: absolute;
   left: -220px;
   top: 0;
+
   animation-name: FloatingLego;
   animation-iteration-count: 1;
   animation-duration: 10s;
   animation-fill-mode: forwards;
   animation-delay: 3s;
   animation-timing-function: linear;
-  z-index: 2;
+  z-index: 1;
 }
-
+/* Stjerner*/
 section {
   position: absolute;
   top: 0;
@@ -88,6 +161,7 @@ section {
   height: 100vh;
   animation: animateBg 50s linear infinite;
 }
+/* Resten av siden er animation av stjerner*/
 @keyframes animateBg {
   0%,
   100% {
@@ -109,7 +183,7 @@ span {
     0 0 0 0 8px rgba(255, 255, 255, 01), 0 0 20px rgba(255, 255, 255, 1);
   animation: animate 3s linear infinite;
 }
-span::before {
+span {
   position: absolute;
   top: 50%;
   transform: translate(-50%);
