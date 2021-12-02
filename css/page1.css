@@ -111,7 +111,7 @@ body {
 
     animation-name: cloudMoveAnim;
     animation-duration: 20s;
-    animation-timing-function:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
