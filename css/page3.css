@@ -114,6 +114,7 @@
     border-radius: 5px;
 }
 
+/* Animation for ferrari */
 @keyframes startFerrari {
     0% {
         bottom: -100%;
@@ -160,6 +161,7 @@
     border-radius: 5px;
 }
 
+/* Animation for train */
 @keyframes flyBy {
     0% {
         right: -100%;
