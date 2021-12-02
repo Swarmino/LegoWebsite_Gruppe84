@@ -14,7 +14,7 @@ body {
   height: 100vh;
   width: 100%;
 }
-
+/* Ole Kirk animation */
 .oleKirk {
   position: fixed;
   height: 450px;
@@ -44,7 +44,7 @@ body {
     bottom: 0;
   }
 }
-
+/* The text inside the speaking bubble */
 .textSpeakingBubble {
   position: relative;
   color: black;
@@ -61,7 +61,7 @@ body {
   animation-duration: 7s;
   animation-timing-function: ease-in;
 }
-
+/* Using opacity to make a fade in effect*/
 @keyframes TextSpeakingBubble {
   from {
     opacity: 0;
@@ -70,6 +70,7 @@ body {
     opacity: 1;
   }
 }
+/* Animation of the speaking bubble*/
 .speakingBubble {
   position: absolute;
   height: 200px;
@@ -86,7 +87,7 @@ body {
   animation-duration: 6s;
   animation-timing-function: ease-in;
 }
-
+/* Using opacity to make a fade in effect*/
 @keyframes SpeakingBubble {
   from {
     opacity: 0;
@@ -95,7 +96,7 @@ body {
     opacity: 1;
   }
 }
-
+/* Animation of the earth picture*/
 .earth {
   position: absolute;
   width: 70%;
@@ -110,6 +111,7 @@ body {
   animation-timing-function: ease-in-out;
   animation-direction: alternate-reverse;
 }
+
 @keyframes RotateEarth {
   0% {
     transform: translateY(-50%);
@@ -119,7 +121,7 @@ body {
   }
 }
 
-/* Animation av lego-astronaut i bakgrunnen*/
+/* Animation of lego-astronaut in the background*/
 @keyframes FloatingLego {
   from {
     left: -220px;
@@ -147,7 +149,7 @@ body {
   animation-timing-function: linear;
   z-index: 1;
 }
-/* Stjerner*/
+/* Stars*/
 section {
   position: absolute;
   top: 0;
@@ -156,8 +158,9 @@ section {
   height: 100vh;
   animation: animateBg 50s linear infinite;
 }
-/* Resten av siden er animation av stjerner*/
+/* The rest of the page is animation of the stars*/
 
+/* Using scale to show more of the stars*/
 @keyframes animateBg {
   0%,
   100% {
@@ -187,7 +190,7 @@ span {
   background: linear-gradient(90deg, #fff, transparent); 
 
 }
-/* Rotajon på stjernene og hvor langt ned de skal*/
+/* Rotation to show how far down the stars are going*/
 @keyframes animate {
   0% {
     transform: rotate(315deg) translateX(0);
@@ -201,7 +204,7 @@ span {
     opacity: 0;
   }
 }
-/* alle 10 stjernene*/
+/* all the 10 stars*/
 span:nth-child(1) {
   top: 0;
   right: 0;
