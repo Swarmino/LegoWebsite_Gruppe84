@@ -118,7 +118,6 @@
     bottom: 93%;
     height: 1%;
     width: 1%;
-
     transform: skewX(-5deg) skewY(-160deg) rotateY(-10deg);
     cursor: help;
 }
@@ -132,6 +131,7 @@
     bottom: 85%;
     height: 14%;
     width: 6%;
+    cursor: help;
     transform: skewX(-5deg) skewY(-160deg) rotateY(-10deg);
 }
 #spiderWeb{
@@ -308,6 +308,7 @@
     top: 15%;
     height: 25%;
     width: 28%;
+    cursor: help;
     animation-name: engageEngine,callForDuty;
     animation-duration: 300ms,10s;
     animation-fill-mode: forwards;
@@ -369,27 +370,47 @@
     right: 0;
     left: 0;
 }
-p.kirkChatBubble{
+p.textBox{
     z-index: 20;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     padding: 0.625%;
-    left: 25%;
-    top: 50%;
     width: 25%;
     opacity: 0;
     border-radius: 25px;
     background-color: whitesmoke;
     border: 1px solid black;
     box-shadow: 2px 2px 10px black;
+    cursor: default;
     transition-delay: 200ms;
     transition-timing-function: ease-in-out;
 }
 /* Show another element with + selector, elements has to placed after each other */
-#oleKirk:hover + p.kirkChatBubble {
+#oleKirk:hover ~ p.text1 {
     opacity: 1;
 }
-
+p.kirkChatBubble{
+    bottom: 10%;
+    left: 15%;
+}
+p.harryPotterBubble{
+    top: 50%;
+    left: 35%;
+}
+#empireFalcon:hover ~ p.text2{
+    opacity: 1;
+}
+p.starwarsBubble{
+    bottom: 15%;
+    right: 15%;
+}
+#spiderLogo:hover ~ p.text3{
+    opacity: 1;
+}
+p.spidermanBubble{
+    right: 30%;
+    top: 15%;
+}
 
